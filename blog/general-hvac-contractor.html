@@ -54,10 +54,49 @@
     #schedule { scroll-margin-top: 120px; } /* adjust for sticky header height */
     @media (max-width: 768px) { #schedule { scroll-margin-top: 140px; } }
   </style>
+
+<style id="ft-fallback">
+  .bg-brand-blue{background:#0A2E5C!important;color:#fff}
+  .bg-brand-orange{background:#FF6A13!important;color:#fff}
+  .text-brand-blue{color:#0A2E5C!important}
+  .shadow-soft{box-shadow:0 10px 30px rgba(10,46,92,.12)}
+  .backdrop-blur{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+  .rounded-xl{border-radius:0.75rem}
+  .rounded-lg{border-radius:0.5rem}
+  .rounded-md{border-radius:0.375rem}
+  .px-4{padding-left:1rem;padding-right:1rem}
+  .px-3{padding-left:0.75rem;padding-right:0.75rem}
+  .py-3{padding-top:.75rem;padding-bottom:.75rem}
+  .py-2{padding-top:.5rem;padding-bottom:.5rem}
+  .py-1\.5{padding-top:.375rem;padding-bottom:.375rem}
+  .text-xs{font-size:.75rem}
+  .text-sm{font-size:.875rem}
+  .font-medium{font-weight:500}
+  .font-semibold{font-weight:600}
+  .font-extrabold{font-weight:800}
+  .border{border:1px solid rgba(15,23,42,.15)}
+  .border-b{border-bottom:1px solid rgba(15,23,42,.12)}
+  .border-slate-200{border-color:#e2e8f0}
+  .max-w-7xl{max-width:80rem;margin-left:auto;margin-right:auto}
+  .mx-auto{margin-left:auto;margin-right:auto}
+  .flex{display:flex}
+  .items-center{align-items:center}
+  .justify-between{justify-content:space-between}
+  .gap-6{gap:1.5rem}
+  .gap-3{gap:.75rem}
+  .hidden{display:none}
+  .lg\:flex{display:none}
+  .lg\:hidden{}
+  @media(min-width:1024px){.lg\:flex{display:flex}.lg\:hidden{display:none}}
+  a{text-decoration:none;color:inherit}
+  a:hover{text-decoration:underline}
+  header{position:sticky;top:0;z-index:50}
+</style>
+
 </head>
 
 
-<body class="font-[Inter] text-slate-800">
+<body>
 <div class="bg-brand-blue text-white text-xs">
   <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
     <p class="hidden md:block">Licensed • Bonded • Insured • WA Lic. FLOWTTH750BT</p>
@@ -67,85 +106,7 @@
       <a href="tel:2534480801" class="font-semibold">Call: (253) 448-0801</a>
       <a href="../index.html#schedule" class="bg-brand-orange text-white rounded-md px-3 py-1.5 font-semibold shadow hover:bg-brand-orangeDark transition">Schedule Now</a>
     </div>
-  </div>
-</div>
-<header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-6">
-    <a href="../index.html" class="flex items-center gap-3">
-      <img src="../assets/flowtechlogo.png" alt="Flow Tech Logo" class="w-10 h-10"/>
-      <div>
-        <div class="text-xl font-extrabold tracking-tight text-brand-blue">Flow Tech</div>
-        <div class="text-xs uppercase tracking-wide text-slate-500">Heating • AC • Electric</div>
-      </div>
-    </a>
-    <nav class="hidden lg:flex items-center gap-6 text-sm font-medium">
-      <div class="relative group">
-        <a href="../electrical.html" class="hover:text-brand-blue">Electrical</a>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-200 absolute left-0 mt-3 w-[620px] rounded-xl border border-slate-200 bg-white shadow-soft p-6 grid grid-cols-2 gap-6">
-          <div>
-            <a class="block font-semibold text-brand-blue" href="../electrical.html">Upgrades & Repairs</a>
-            <ul class="mt-2 space-y-2 text-slate-700 text-sm">
-              <li><a href="../electrical.html#panels" class="hover:underline">Panel Upgrades</a></li>
-              <li><a href="../electrical.html#ev" class="hover:underline">EV Chargers</a></li>
-              <li><a href="../electrical.html#surge" class="hover:underline">Surge Protection</a></li>
-            </ul>
-          </div>
-          <div>
-            <a class="block font-semibold text-brand-blue" href="../electrical.html#lighting">Lighting & More</a>
-            <ul class="mt-2 space-y-2 text-slate-700 text-sm">
-              <li><a href="../electrical.html#circuits" class="hover:underline">Circuits & Outlets</a></li>
-              <li><a href="../electrical.html#lighting" class="hover:underline">Indoor/Outdoor Lighting</a></li>
-              <li><a href="../electrical.html#generators" class="hover:underline">Generator Interlocks</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <a href="../electrical.html#generators" class="hover:text-brand-blue">Generators</a>
-      <div class="relative group">
-        <a href="../services.html" class="hover:text-brand-blue">Heating &amp; Cooling</a>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition duration-200 absolute left-0 mt-3 w-[620px] rounded-xl border border-slate-200 bg-white shadow-soft p-6 grid grid-cols-2 gap-6">
-          <div>
-            <a class="block font-semibold text-brand-blue" href="../heating.html">Heating</a>
-            <ul class="mt-2 space-y-2 text-slate-700 text-sm">
-              <li><a href="../heating.html#repair" class="hover:underline">Repair</a></li>
-              <li><a href="../heating.html#install" class="hover:underline">Install/Replace</a></li>
-              <li><a href="../heating.html#maintenance" class="hover:underline">Maintenance</a></li>
-            </ul>
-          </div>
-          <div>
-            <a class="block font-semibold text-brand-blue" href="../ac.html">Air Conditioning</a>
-            <ul class="mt-2 space-y-2 text-slate-700 text-sm">
-              <li><a href="../ac.html#repair" class="hover:underline">Repair</a></li>
-              <li><a href="../ac.html#install" class="hover:underline">Install/Replace</a></li>
-              <li><a href="../ac.html#maintenance" class="hover:underline">Maintenance</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <a href="../service-areas.html" class="hover:text-brand-blue">Service Areas</a>
-      <a href="../financing.html" class="hover:text-brand-blue">Financing</a>
-      <a href="../about.html" class="hover:text-brand-blue">About</a>
-      <a href="../reviews.html" class="hover:text-brand-blue">Reviews</a>
-      <a href="../careers.html" class="hover:text-brand-blue">Careers</a>
-      <a href="../blog/index.html" class="hover:text-brand-blue">Blog</a>
-      <a href="../contact.html" class="hover:text-brand-blue">Contact</a>
-    </nav>
-    <div class="flex items-center gap-2">
-      <a href="../index.html#schedule" class="hidden md:inline-flex bg-brand-orange text-white rounded-lg px-4 py-2.5 font-semibold shadow hover:bg-brand-orangeDark transition">Schedule Now</a>
-      <button id="menuBtn" aria-controls="mobileMenu" aria-expanded="false" class="inline-flex lg:hidden items-center justify-center rounded-md border border-slate-300 px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
-        <span class="sr-only">Open menu</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-  </div>
-  <div id="mobileMenu" class="lg:hidden hidden border-t border-slate-200 bg-white">
-    <nav class="px-4 py-3 grid gap-3 text-sm font-medium"></nav>
-  </div>
-</header>
-
-<div class="bg-brand-blue text-white text-xs">
+  <div class="bg-brand-blue text-white text-xs">
   <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
     <p class="hidden md:block">Licensed • Bonded • Insured • WA Lic. FLOWTTH750BT</p>
     <div class="flex items-center gap-3 ml-auto">
@@ -154,227 +115,5 @@
       <a href="tel:2534480801" class="font-semibold">Call: (253) 448-0801</a>
       <a href="../index.html#schedule" class="bg-brand-orange text-white rounded-md px-3 py-1.5 font-semibold shadow hover:bg-brand-orangeDark transition">Schedule Now</a>
     </div>
-  </div>
-</div>
-
-<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
-
-  <div class="bg-brand-blue text-white text-sm">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
-      <p class="hidden md:block">Licensed • Bonded • Insured • WA Contractor Lic. FLOWTTH750BT</p>
-      <div class="flex items-center gap-4 ml-auto">
-        <a href="../specials.html" class="underline/50 hover:underline">Financing</a>
-        <a href="reviews.html" class="underline/50 hover:underline">Reviews</a>
-        <a href="tel:2534480801" class="font-semibold">Call Now: (253) 448-0801</a>
-        <a href="../index.html#schedule" class="bg-brand-orange text-white rounded-md px-3 py-1.5 font-semibold shadow hover:bg-brand-orangeDark transition">Schedule Service</a>
-      </div>
-    </div>
-  </div>
-
-  
-<main class="max-w-4xl mx-auto px-4 py-10 prose">
-  <p><em>Published 2025-09-16</em></p>
-  <picture>
-  <source srcset="assets/hero-home.webp" type="image/webp">
-  <img src="../assets/hero-home.jpg" alt="" class="rounded-xl my-4" loading="eager" decoding="async"/>
-</picture>
-  <p>[Full blog content for "How to Pick the Right HVAC Contractor in Pierce County" will go here — 800–1200 words of SEO‑rich, engaging content tailored for Flow Tech’s audience.]</p>
-</main><footer class="bg-slate-900 text-slate-200">
-    <div class="max-w-7xl mx-auto px-4 py-14 grid md:grid-cols-4 gap-8">
-      <div>
-        <div class="flex items-center gap-3">
-          <img src="../assets/flowtechlogo.png" alt="Flow Tech Logo" class="w-10 h-10"/>
-          <div>
-            <div class="font-extrabold">Flow Tech</div>
-            <div class="text-xs uppercase tracking-wide text-slate-400">Heating • AC • Electric</div>
-          </div>
-        </div>
-        <p class="mt-4 text-sm text-slate-400">Comfort, efficiency and safety—powered by a team that cares.</p>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Services</h4>
-        <ul class="space-y-2 text-sm text-slate-300">
-          <li><a href="../heating.html" class="hover:underline">Heating</a></li>
-          <li><a href="../ac.html" class="hover:underline">Air Conditioning</a></li>
-          <li><a href="../electrical.html" class="hover:underline">Electrical</a></li>
-          <li><a href="../financing.html" class="hover:underline">Financing</a></li>
-          <li><a href="blog/" class="hover:underline">Blog</a></li>
-        <li><a href="../service-areas.html" class="hover:underline">Service Areas</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Company</h4>
-        <ul class="space-y-2 text-sm text-slate-300">
-          <li><a href="../about.html" class="hover:underline">About</a></li>
-          <li><a href="reviews.html" class="hover:underline">Reviews</a></li>
-          <li><a href="careers.html" class="hover:underline">Careers</a></li>
-          <li><a href="../contact.html" class="hover:underline">Contact</a></li>
-          <li><a href="../sitemap.html" class="hover:underline">Sitemap</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-semibold mb-3">Get in Touch</h4>
-        <ul class="space-y-2 text-sm text-slate-300">
-          <li><a href="tel:2534480801" class="hover:underline">(253) 448-0801</a></li>
-          <li><a href="mailto:info@flowtechheatingac.com" class="hover:underline">info@flowtechheatingac.com</a></li>
-          <li><span>PO BOX 213, Eatonville, WA 98328</span></li>
-          <li><a href="../service-areas.html" class="hover:underline">Service Areas</a></li>
-          <li><a href="https://www.facebook.com/FlowTechHeatingACAndElectric/" target="_blank" class="hover:underline">Facebook</a></li>
-          <li><a href="https://www.bbb.org/us/wa/eatonville/profile/heating-and-air-conditioning/flow-tech-heating-ac-llc-1296-1000185616/addressId/875975" target="_blank" class="hover:underline">BBB Profile</a></li>
-          <li><a href="https://www.google.com/search?q=Flow+Tech+Heating+AC+%26+Electric+Eatonville" target="_blank" class="hover:underline">Google Business Profile</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-slate-800">
-      <div class="max-w-7xl mx-auto px-4 py-6 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <div>© <span id="year"></span> Flow Tech Heating, AC & Electric. All rights reserved.</div>
-        <span>WA Contractor Lic. FLOWTTH750BT</span> <a href="../privacy.html" class="hover:underline">Privacy</a> <a href="../terms.html" class="hover:underline">Terms</a> <a href="../sitemap.html" class="hover:underline">Sitemap</a>
-      </div>
-    </div>
-  </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "HVACBusiness",
-  "name": "Flow Tech Heating, AC & Electric",
-  "url": "https://flowtechheatingac.com/",
-  "telephone": "(253) 448-0801",
-  "areaServed": [
-    "Eatonville",
-    "Bonney Lake",
-    "Enumclaw",
-    "Buckley",
-    "Orting",
-    "Graham",
-    "Spanaway",
-    "South Hill",
-    "Puyallup",
-    "Sumner",
-    "Tacoma",
-    "Maple Valley",
-    "Covington",
-    "Kent",
-    "Auburn",
-    "Federal Way",
-    "Black Diamond",
-    "Roy",
-    "Yelm"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "PO BOX 213",
-    "addressLocality": "Eatonville",
-    "addressRegion": "WA",
-    "postalCode": "98328"
-  },
-  "sameAs": [
-    "https://www.facebook.com/FlowTechHeatingACAndElectric/"
-  ],
-  "openingHours": "Mo-Fr 07:00-19:00",
-  "image": "https://flowtechheatingac.com/assets/hero-home.jpg"
-}
-  </script>
-
-<script>
-  // Fallback smooth-scroll that accounts for sticky header height
-  function anchorOffsetScroll(e) {
-    const href = e.currentTarget.getAttribute('href') || '';
-    const m = href.match(/#(.+)$/);
-    if (!m) return;
-    const id = m[1];
-    const el = document.getElementById(id);
-    if (!el) return;
-    e.preventDefault();
-    const header = document.querySelector('header');
-    const offset = (header ? header.offsetHeight : 0) + 20;
-    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-    window.scrollTo({ top, behavior: 'smooth' });
-    history.pushState(null, '', href.indexOf('index.html') === 0 ? href : ('index.html#' + id));
-  }
-  // Attach to schedule CTA buttons on this page only
-  document.querySelectorAll('a[href$="#schedule"]').forEach(a => {
-    a.addEventListener('click', anchorOffsetScroll);
-  });
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('menuBtn');
-    const panel = document.getElementById('mobileMenu');
-    const desktopNav = document.querySelector('header nav');
-    const mobileNav = panel ? panel.querySelector('nav') : null;
-    if (desktopNav && mobileNav && mobileNav.childElementCount === 0) {
-      const links = desktopNav.querySelectorAll('a');
-      links.forEach(a => {
-        const copy = a.cloneNode(true);
-        copy.classList.remove('hover:text-brand-blue');
-        copy.classList.add('py-2','border-b','border-slate-100');
-        mobileNav.appendChild(copy);
-      });
-    }
-    btn && panel && btn.addEventListener('click', () => {
-      const willOpen = panel.classList.contains('hidden');
-      panel.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-      document.body.classList.toggle('overflow-hidden', willOpen);
-    });
-    panel && panel.addEventListener('click', (e) => {
-      const t = e.target;
-      if (t && t.tagName === 'A') {
-        panel.classList.add('hidden');
-        btn && btn.setAttribute('aria-expanded','false');
-        document.body.classList.remove('overflow-hidden');
-      }
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1024 && panel && btn) {
-        panel.classList.add('hidden');
-        btn.setAttribute('aria-expanded','false');
-        document.body.classList.remove('overflow-hidden');
-      }
-    });
-  });
-</script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.getElementById('menuBtn');
-    const panel = document.getElementById('mobileMenu');
-    const desktopNav = document.querySelector('header nav');
-    const mobileNav = panel ? panel.querySelector('nav') : null;
-    if (desktopNav && mobileNav && mobileNav.childElementCount === 0) {
-      const links = desktopNav.querySelectorAll('a');
-      links.forEach(a => {
-        const copy = a.cloneNode(true);
-        copy.classList.remove('hover:text-brand-blue');
-        copy.classList.add('py-2','border-b','border-slate-100');
-        mobileNav.appendChild(copy);
-      });
-    }
-    btn && panel && btn.addEventListener('click', () => {
-      const willOpen = panel.classList.contains('hidden');
-      panel.classList.toggle('hidden');
-      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
-      document.body.classList.toggle('overflow-hidden', willOpen);
-    });
-    panel && panel.addEventListener('click', (e) => {
-      const t = e.target;
-      if (t && t.tagName === 'A') {
-        panel.classList.add('hidden');
-        btn && btn.setAttribute('aria-expanded','false');
-        document.body.classList.remove('overflow-hidden');
-      }
-    });
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1024 && panel && btn) {
-        panel.classList.add('hidden');
-        btn.setAttribute('aria-expanded','false');
-        document.body.classList.remove('overflow-hidden');
-      }
-    });
-  });
-</script>
-</body>
+  </body>
 </html>
