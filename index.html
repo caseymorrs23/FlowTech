@@ -48,6 +48,12 @@
   <style>
     html { scroll-behavior: smooth; }
   </style>
+
+  <style>
+    /* anchor-offset */
+    #schedule { scroll-margin-top: 120px; } /* adjust for sticky header height */
+    @media (max-width: 768px) { #schedule { scroll-margin-top: 140px; } }
+  </style>
 </head>
 <body class="font-[Inter] text-slate-800"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> 
 
@@ -55,7 +61,7 @@
     <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
       <p class="hidden md:block">Licensed • Bonded • Insured • WA Contractor Lic. FLOWTTH750BT</p>
       <div class="flex items-center gap-4 ml-auto">
-        <a href="financing.html" class="underline/50 hover:underline">Financing</a>
+        <a href="specials.html" class="underline/50 hover:underline">Financing</a>
         <a href="reviews.html" class="underline/50 hover:underline">Reviews</a>
         <a href="tel:2534480801" class="font-semibold">Call Now: (253) 448-0801</a>
         <a href="index.html#schedule" class="bg-brand-orange text-white rounded-md px-3 py-1.5 font-semibold shadow hover:bg-brand-orangeDark transition">Schedule Service</a>
@@ -76,8 +82,8 @@
         <a href="heating.html" class="hover:text-brand-blue">Services</a>
         <a href="service-areas.html" class="hover:text-brand-blue">Locations</a>
         <a href="about.html" class="hover:text-brand-blue">Why Us</a>
-        <a href="financing.html" class="hover:text-brand-blue">Specials</a>
-        <a href="financing.html" class="hover:text-brand-blue">Financing</a>
+        <a href="specials.html" class="hover:text-brand-blue">Specials</a>
+        <a href="specials.html" class="hover:text-brand-blue">Financing</a>
         <a href="about.html" class="hover:text-brand-blue">About</a>
         <a href="contact.html" class="hover:text-brand-blue">Contact</a>
       </nav>
@@ -94,7 +100,7 @@
         <a href="heating.html" class="py-2">Services</a>
         <a href="service-areas.html" class="py-2">Locations</a>
         <a href="about.html" class="py-2">Why Us</a>
-        <a href="financing.html" class="py-2">Specials</a>
+        <a href="specials.html" class="py-2">Specials</a>
         <a href="financing.html" class="py-2">Financing</a>
         <a href="about.html" class="py-2">About</a>
         <a href="contact.html" class="py-2">Contact</a>
@@ -355,5 +361,27 @@
   "image": "https://flowtechheatingac.com/assets/hero-home.jpg"
 }
   </script>
+
+<script>
+  // Fallback smooth-scroll that accounts for sticky header height
+  function anchorOffsetScroll(e) {
+    const href = e.currentTarget.getAttribute('href') || '';
+    const m = href.match(/#(.+)$/);
+    if (!m) return;
+    const id = m[1];
+    const el = document.getElementById(id);
+    if (!el) return;
+    e.preventDefault();
+    const header = document.querySelector('header');
+    const offset = (header ? header.offsetHeight : 0) + 20;
+    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+    history.pushState(null, '', href.indexOf('index.html') === 0 ? href : ('index.html#' + id));
+  }
+  // Attach to schedule CTA buttons on this page only
+  document.querySelectorAll('a[href$="#schedule"]').forEach(a => {
+    a.addEventListener('click', anchorOffsetScroll);
+  });
+</script>
 </body>
 </html>
